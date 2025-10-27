@@ -1,10 +1,37 @@
-# 36-3 getting started with react bootstrap
+# 36-6 React Fragment empty element
 
-## npm install bootstrap -> we need to install it for using bootstrap in react project. After install we need to import it from 'bootstrap/dist/css/bootstrap.css' on main.jsx file. By using this we can only use css class
+## <></> -> it's react empty fragment or element
+## <React.Fragment></React.Fragment> -> it's also a react fragment that's comes from 'react' module.
+## We can also use Fragment component from 'react'.
 
-## npm install react-bootstrap -> we need to install it for using bootstrap build in component. After installing which cmp i want ot use this cmp i need to import from 'react-bootstrap'. variant props is used to define the color of the cmp
+### ==> import {Fragment} from 'react';
+### ==> <Fragment><Fragment>
 
-### ===> import {Button} from 'react-bootstrap';
-###      const News = () => {
-###         return <Button variant="primary">Primary</Button>
+### ===> const News = () => {
+###         return (
+###                 <>
+###                     <h1>My Header</h1>
+###                     <button>Click me</button>
+###                 </>
+###         )
+###      }
+
+
+### ===> const News = () => {
+###         return (
+###                 <React.Fragment>
+###                     <h1>My Header</h1>
+###                     <button>Click me</button>
+###                 </React.Fragment>
+###         )
+###      }
+
+### ===> import {Fragment} from 'react';
+### ===> const News = () => {
+###         return (
+###                 <Fragment>
+###                     <h1>My Header</h1>
+###                     <button>Click me</button>
+###                 </Fragment>
+###         )
 ###      }
