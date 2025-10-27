@@ -4,7 +4,7 @@ import News from '../News/News';
 const TopHeadline = () => {
     const [articles, setArticles] = useState([]);
     useEffect(() => {
-        const apiKey = '172a2a7192e44c51bf627a06620ffe62';
+        const apiKey = '';
         const url = ' https://newsapi.org/v2/top-headlines?country=us&apiKey=' + apiKey;
         fetch(url)
             .then(res => res.json())
