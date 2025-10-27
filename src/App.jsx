@@ -1,6 +1,7 @@
 import './App.css';
 import { Button } from 'react-bootstrap';
-import News from './components/News/News';
+import Header from './components/Header/Header';
+import TopHeadline from './components/TopHeadline/TopHeadline';
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
     <div>
       <h2>React Bootstrap</h2>
       <Button variant='primary'>Primary</Button>
-      <News></News>
+      <Header></Header>
+      <TopHeadline></TopHeadline>
     </div>
   )
 }
