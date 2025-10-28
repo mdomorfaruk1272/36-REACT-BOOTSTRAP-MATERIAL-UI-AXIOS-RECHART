@@ -1,14 +1,21 @@
+import axios from 'axios';
 import './App.css'
-import { Button } from '@mui/material'
 import News from './components/News/News'
 import { useEffect, useState } from 'react'
 function App() {
   const [articles, setArticles] = useState([]);
+
   useEffect(() => {
-    const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=172a2a7192e44c51bf627a06620ffe62';
+    const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=';
     fetch(url)
       .then(res => res.json())
-      .then(data => setArticles(data.articles))
+      .then(data => console.log(data))
+  }, [])
+
+  useEffect(() => {
+    const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=';
+   axios(url)
+   .then(data => setArticles(data.data.articles));
   }, [])
 
   return (
